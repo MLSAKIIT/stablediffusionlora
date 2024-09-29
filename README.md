@@ -99,4 +99,5 @@ If you need to add or update dependencies:
 
 - LoRA paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - Stable Diffusion: [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- LoRA for Stable Diffusion: [LoRA Adaptation for Diffusion Models](https://huggingface.co/blog/lora)
 
