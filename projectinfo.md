@@ -2,7 +2,7 @@
 
 ## 1. Project Overview
 
-For this year's Hacktoberfest, we propose an exciting project that combines cutting-edge AI technology with creative applications. Participants will fine-tune the Stable Diffusion 1.4 model using Low-Rank Adaptation (LoRA) to generate custom images in specific styles or featuring particular subjects.
+Participants will fine-tune the Stable Diffusion 1.4 model using Low-Rank Adaptation (LoRA) to generate custom images in specific styles or featuring particular subjects.
 
 ### Objectives:
 1. Implement LoRA from scratch
@@ -13,16 +13,16 @@ For this year's Hacktoberfest, we propose an exciting project that combines cutt
 ## 2. Technology Overview
 
 ### 2.1 Stable Diffusion 1.4
-- A powerful text-to-image model capable of generating photo-realistic images
+- A basic text-to-image model capable of generating photo-realistic images
 - Can create 512x512 pixel images from text descriptions
 
 ### 2.2 Low-Rank Adaptation (LoRA)
-- An efficient fine-tuning technique that adapts large models with few parameters
+- A fine-tuning technique that adapts large models with few parameters
 - Allows for quick customization of Stable Diffusion without extensive resources
 
 ## 3. Practical Applications and Examples
 
-Participants can choose from various exciting applications, such as:
+Participants can choose from various exciting applications, including but not limited to:
 
 ### 3.1 Anime Style Generator
 - Dataset: Collect 1000-5000 anime images from a specific style or artist
@@ -74,25 +74,3 @@ Participants can choose from various exciting applications, such as:
 2. A fine-tuned Stable Diffusion model for your chosen application
 3. A set of generated images demonstrating your model's capabilities
 4. Deep understanding of advanced ML concepts and their practical applications
-
-## 7. Challenges and Learning Opportunities
-
-- Implementing ML techniques from research papers
-- Curating effective datasets for specific styles or subjects
-- Balancing model performance with training efficiency
-- Evaluating and iterating on image generation quality
-
-## 8. Resources and Support
-
-- Weekly office hours for technical support
-- Access to research papers and tutorials
-- Discord server for participant communication
-
-## 9. Timeline
-
-- Week 1: Setup and LoRA implementation
-- Week 2-3: Integration with SD 1.4 and dataset preparation
-- Week 4: Training and initial results
-- Week 5: Final tuning, evaluation, and presentation preparation
-
-This project offers a unique blend of technical challenge and creative expression. Participants will gain hands-on experience with state-of-the-art AI while creating fun and impressive image generation models tailored to their interests.
