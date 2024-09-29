@@ -25,5 +25,5 @@ class LoRANetwork(nn.Module):
         pass
 
 def inject_trainable_lora(model, rank=4, alpha=1):
-    # TODO: Implement LoRA injection into the model
+    # TODO: Implement LorA injction into the model
     pass
