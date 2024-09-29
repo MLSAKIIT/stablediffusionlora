@@ -66,9 +66,9 @@ c) Evaluation:
 
 ### 3. Dataset Preparation (`dataset.py`)
 
-The `CustomDataset` class is mostly implemented, but you may need to:
+The `CustomDataset` class is mostly implemented, but we need to:
 
-a) Add functionality for text captions if your dataset includes them
+a) Add functionality for text captions
 b) Implement additional data augmentation techniques if needed
 
 ### 4. Additional Considerations
