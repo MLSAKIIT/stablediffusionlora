@@ -7,6 +7,26 @@ This document outlines the technical aspects of the project and highlights the a
 - `train_lora.py`: Main training script
 - `dataset.py`: Custom dataset class for loading images
 - `lora_diffusion.py`: LoRA implementation and integration with Stable Diffusion
+- `requirements.txt`: List of required Python packages
+
+## Setup and Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/your-username/sd-lora-finetuning.git
+   cd sd-lora-finetuning
+   ```
+
+2. Create a virtual environment (recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Technical Details and Implementation Requirements
 
@@ -59,14 +79,24 @@ b) Implement additional data augmentation techniques if needed
 
 ## Getting Started
 
-1. Install the required dependencies (list them in a `requirements.txt` file)
+1. Ensure you have completed the setup and installation steps above.
 2. Prepare your dataset and update the `dataset_path` in `train_lora.py`
 3. Complete the TODO items in the code files
 4. Run the training script: `python train_lora.py`
+
+## Customizing Dependencies
+
+If you need to add or update dependencies:
+
+1. Modify the `requirements.txt` file
+2. Reinstall the requirements:
+   ```
+   pip install -r requirements.txt
+   ```
+
 
 ## Resources
 
 - LoRA paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - Stable Diffusion: [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
 
-Remember to document your code thoroughly and add comments explaining the implementation details. Good luck with your Hacktoberfest project!
