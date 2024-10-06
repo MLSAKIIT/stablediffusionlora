@@ -9,9 +9,8 @@ This document outlines the technical implementation of fine-tuning Stable Diffus
 
 ```
 sd-lora-finetuning/
-├── CONTRIBUTING/
-│   ├── CONTRIBUTING.md
-│   └── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
@@ -46,7 +45,7 @@ sd-lora-finetuning/
 
 - `src/`: Contains the example implementation (refer to this for your contribution)
 - `CONTRIBUTIONS/`: Directory where participants should add their implementations
-- `CONTRIBUTING/`: Guidelines and help regarding contributing(MUST READ!)
+- `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md`: Guidelines and help regarding contributing(MUST READ!)
 - Other files in the root directory are for project documentation and setup
 
 ## Technical Overview
@@ -177,7 +176,7 @@ def generate_image(prompt, pipeline, num_inference_steps=50):
 
 Refer to the `src` directory for an example of how to structure your contribution.
 
-Refer to `CONTRIBUTING/COONTRIBUTING.md` for a detailed overview, if you're a beginner!
+Refer to `CONTRIBUTING.md` for a detailed overview, if you're a beginner!
 
 ## Technical Deep Dive
 

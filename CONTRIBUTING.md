@@ -89,10 +89,18 @@ repository-root/
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
-├── src/
+├── src/  (Example implementation)
+│   ├── Dataset/
+│   │   ├── ImageCaptions/
+│   │   │   └── example1.txt
+│   │   └── Images/
+│   │       └── example1.png
 │   ├── dataset.py
-│   ├── lora_diffusion.py
-│   └── train_lora.py
+│   ├── generate.py
+│   ├── lora.py
+│   ├── main.py
+│   ├── train.py
+│   └── utils.py
 └── CONTRIBUTIONS/
     └── (This is where you'll add your folder)
 ```
