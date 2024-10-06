@@ -1,4 +1,5 @@
 # Stable Diffusion 1.4 Fine-tuning with LoRA: Technical Details
+[![Hacktoberfest 2024](https://img.shields.io/badge/Hacktoberfest-2024-orange.svg)](https://hacktoberfest.com/)
 
 This document outlines the technical aspects of the project and highlights the areas that need to be implemented.
 
@@ -66,9 +67,9 @@ c) Evaluation:
 
 ### 3. Dataset Preparation (`dataset.py`)
 
-The `CustomDataset` class is mostly implemented, but you may need to:
+The `CustomDataset` class is mostly implemented, but we need to:
 
-a) Add functionality for text captions if your dataset includes them
+a) Add functionality for text captions
 b) Implement additional data augmentation techniques if needed
 
 ### 4. Additional Considerations
@@ -99,4 +100,5 @@ If you need to add or update dependencies:
 
 - LoRA paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - Stable Diffusion: [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
+- LoRA for Stable Diffusion: [LoRA Adaptation for Diffusion Models](https://huggingface.co/blog/lora)
 
