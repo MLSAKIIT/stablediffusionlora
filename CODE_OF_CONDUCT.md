@@ -35,7 +35,7 @@ This Code of Conduct applies to all spaces related to the MLSA KIIT Hacktoberfes
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the MLSA KIIT team responsible for enforcement at [INSERT CONTACT METHOD]. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the MLSA KIIT team responsible for enforcement at [MLSA KIIT Discord](https://discord.gg/DymVbhCmJf). All complaints will be reviewed and investigated promptly and fairly.
 
 ## Enforcement Guidelines
 
