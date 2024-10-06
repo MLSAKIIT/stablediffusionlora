@@ -52,6 +52,61 @@ git checkout -b your-concept-name
    - Include a script or instructions for loading and applying these weights to the base SD 1.4 model
    - Name the weights file `lora_weights.pt` or similar
 
+
+
+
+
+
+## Project Structure and Your Contribution
+
+The current project structure looks like this:
+
+```
+repository-root/
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── src/
+│   ├── dataset.py
+│   ├── lora_diffusion.py
+│   └── train_lora.py
+└── CONTRIBUTIONS/
+    └── (This is where you'll add your folder)
+```
+
+When adding your contribution:
+
+1. Create a new folder inside the `CONTRIBUTIONS` directory. Name it with your GitHub username or a unique identifier for your concept:
+
+   ```
+   mkdir CONTRIBUTIONS/your-username-concept
+   cd CONTRIBUTIONS/your-username-concept
+   ```
+
+2. Inside your folder, create the following structure:
+
+   ```
+   your-username-concept/
+   ├── fine_tuning_script.py
+   ├── other_necessary_scripts.py
+   ├── requirements.txt (if you have additional dependencies)
+   ├── concept.md
+   ├── lora_weights.pt
+   ├── load_lora_weights.py (or instructions in concept.md)
+   └── samples/
+       ├── sample1.png
+       ├── sample2.png
+       └── ... (at least 10 samples)
+   ```
+
+3. Implement your fine-tuning code, create your concept.md file, save your LoRA weights, and add your sample images as described in the previous sections.
+
+4. When you're ready to submit, make sure your changes only affect files within your folder in the `CONTRIBUTIONS` directory.
+
+
+
 ### 5. Commit and Push Your Changes
 
 1. Stage your changes:
