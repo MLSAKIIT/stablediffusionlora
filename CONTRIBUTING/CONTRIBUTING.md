@@ -53,9 +53,30 @@ git checkout -b your-concept-name
    - Name the weights file `lora_weights.pt` or similar
 
 
+### 5. Commit and Push Your Changes
 
+1. Stage your changes:
+   ```
+   git add .
+   ```
+2. Commit your changes:
+   ```
+   git commit -m "Add fine-tuned SD 1.4 model for [Your Concept]"
+   ```
+3. Push to your fork:
+   ```
+   git push origin your-concept-name
+   ```
 
+### 6. Create a Pull Request
 
+1. Navigate to the original repository on GitHub.
+2. Click on the "Pull requests" tab.
+3. Click the "New pull request" button.
+4. Click "compare across forks" and select your fork and branch.
+5. Click "Create pull request".
+6. Fill in the title and description of your pull request, explaining your changes.
+7. Click "Create pull request" to submit.
 
 ## Project Structure and Your Contribution
 
@@ -106,49 +127,6 @@ When adding your contribution:
 4. When you're ready to submit, make sure your changes only affect files within your folder in the `CONTRIBUTIONS` directory.
 
 
-
-### 5. Commit and Push Your Changes
-
-1. Stage your changes:
-   ```
-   git add .
-   ```
-2. Commit your changes:
-   ```
-   git commit -m "Add fine-tuned SD 1.4 model for [Your Concept]"
-   ```
-3. Push to your fork:
-   ```
-   git push origin your-concept-name
-   ```
-
-### 6. Create a Pull Request
-
-1. Navigate to the original repository on GitHub.
-2. Click on the "Pull requests" tab.
-3. Click the "New pull request" button.
-4. Click "compare across forks" and select your fork and branch.
-5. Click "Create pull request".
-6. Fill in the title and description of your pull request, explaining your changes.
-7. Click "Create pull request" to submit.
-
-## Folder Structure
-
-Your contribution folder should look like this:
-
-```
-your-username-concept/
-├── fine_tuning_script.py
-├── other_necessary_scripts.py
-├── requirements.txt (if needed)
-├── concept.md
-├── lora_weights.pt
-├── load_lora_weights.py (or instructions in concept.md)
-└── samples/
-    ├── sample1.png
-    ├── sample2.png
-    └── ... (at least 10 samples)
-```
 
 ## Guidelines for LoRA Weights
 
