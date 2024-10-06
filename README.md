@@ -1,4 +1,5 @@
 # Stable Diffusion 1.4 Fine-tuning with LoRA: Technical Details
+[![Hacktoberfest 2023](https://img.shields.io/badge/Hacktoberfest-2023-orange.svg)](https://hacktoberfest.com/)
 
 This document outlines the technical aspects of the project and highlights the areas that need to be implemented.
 
