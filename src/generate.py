@@ -1,5 +1,6 @@
 import torch
 from PIL import Image
+import os
 
 def generate_image(prompt, pipeline, num_inference_steps=50):
     with torch.no_grad():
