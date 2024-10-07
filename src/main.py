@@ -3,6 +3,9 @@ from lora import apply_lora_to_model
 from train import train_loop
 from utils import save_lora_weights
 from generate import generate_image, save_images
+import torch
+from torch.utils.data import DataLoader
+from diffusers import StableDiffusionPipeline, DDPMScheduler
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

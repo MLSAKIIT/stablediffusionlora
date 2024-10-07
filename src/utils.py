@@ -1,4 +1,6 @@
 import torch
+from lora import LoRALayer
+
 
 def save_lora_weights(model, path):
     lora_state_dict = {}

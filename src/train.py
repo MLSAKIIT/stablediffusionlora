@@ -1,7 +1,8 @@
 import torch
 from tqdm.auto import tqdm
 import torch.nn.functional as F
-
+from transformers import CLIPTokenizer
+tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-large-patch14")
 def train_loop(dataloader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs):
     for epoch in range(num_epochs):
         total_loss = 0
