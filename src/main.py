@@ -12,19 +12,32 @@ def main():
     model_id = "CompVis/stable-diffusion-v1-4"
     
     # Load model components
-    pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
-    vae = pipe.vae.to(device)
-    text_encoder = pipe.text_encoder.to(device)
-    unet = apply_lora_to_model(pipe.unet).to(device)
+    
+    dtype = torch.float32
+    
+    pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=dtype)
+    pipe = pipe.to(device)
+    
+    vae = pipe.vae.to(device, dtype)
+    text_encoder = pipe.text_encoder.to(device, dtype)
+    unet = apply_lora_to_model(pipe.unet).to(device, dtype)
     tokenizer = pipe.tokenizer
     noise_scheduler = DDPMScheduler.from_config(pipe.scheduler.config)
     
-    dataset = CustomDataset("src/Dataset")  # Update this path as needed
+    dataset = CustomDataset("Dataset")  # Update this path as needed
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
+
+
+ 
+    for i, batch in enumerate(dataloader):
+        print(f"Batch {i}: {batch}")  
+        if i >= 5:  
+            break
+
     
     # Training
     optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-4)
-    num_epochs = 10
+    num_epochs = 20
     train_loop(dataloader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs)
     
     # Save LorA weights
@@ -32,9 +45,7 @@ def main():
     
     # Generate samples(update prompts as per your finetuning concept)
     prompts = [
-        "A beautiful landscape with mountains",
-        "A fat cat playing with a ball",
-        "A futuristic city skyline at night"
+        "A Bulbasaur","Pokemon Bulbasaur", "Green Bulbasaur in HD", "Bulbasaur", "Bulbasaur"
     ]
     pipe.unet = unet
     images = [generate_image(prompt, pipe) for prompt in prompts]
