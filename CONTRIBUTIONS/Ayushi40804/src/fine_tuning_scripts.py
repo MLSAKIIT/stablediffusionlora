@@ -31,7 +31,7 @@ def main():
             break
 
 
-    optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-4)
+    optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-5)
     num_epochs = 20
     train_loop(dataloader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs)
 
