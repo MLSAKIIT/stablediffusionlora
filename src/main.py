@@ -36,7 +36,7 @@ def main():
 
     
     # Training
-    optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-4)
+    optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-5) #LR should be 1e-5 for small datasets of 10-20 images. using a higher LR will cause serious overfitting. 1e-6 may be used for larger datasets.
     num_epochs = 20
     train_loop(dataloader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs)
     
