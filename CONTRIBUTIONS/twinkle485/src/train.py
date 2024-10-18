@@ -59,22 +59,5 @@ def train_loop(dataloader, unet, text_encoder, vae, noise_scheduler, optimizer, 
         avg_loss = epoch_loss / len(dataloader)
         progress_bar.close()
         print(f"Epoch {epoch+1}/{num_epochs}, Average Loss: {avg_loss:.4f}")
-
-        # Early stopping
-        patience = 3  
-        min_delta = 0.001  
-        best_loss = float('inf')
-        early_stopping_counter = 0
-
-        if best_loss - avg_loss > min_delta:
-            best_loss = avg_loss
-            early_stopping_counter = 0  
-        else:
-            early_stopping_counter += 1
-            print(f"Early stopping counter: {early_stopping_counter}/{patience}")
-
-        if early_stopping_counter >= patience:
-            print("Early stopping triggered. Stopping training.")
-            break
             
     print("Training complete!")

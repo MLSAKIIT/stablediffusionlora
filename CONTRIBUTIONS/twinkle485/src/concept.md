@@ -2,7 +2,7 @@
 
 ## Purpose:
 
-This update focuses on improving the training loop by integrating a more advanced learning rate scheduling mechanism, early stopping for optimized training efficiency, and gradient clipping to stabilize training. These modifications ensure that the model can handle various training challenges more effectively.
+This update focuses on improving the training loop by integrating a more advanced learning rate scheduling mechanism for optimized training efficiency, and gradient clipping to stabilize training. These modifications ensure that the model can handle various training challenges more effectively.
 
 ## Changes made:
 
@@ -33,27 +33,6 @@ The training loop has been significantly improved to increase **stability**, **e
     ```python
     torch.nn.utils.clip_grad_norm_(unet.parameters(), max_norm=1.0)
 
-3. **Early Stopping**   
-
-    - An **early stopping mechanism** was introduced based on a patience threshold. 
-    - If the model's loss doesn't improve by at least a specified margin (`min_delta`) over a certain number of epochs (`patience`), training is terminated early to avoid overfitting and unnecessary computations.
-    - This feature helps save time by stopping training when further improvements are unlikely.
-
-    **Code Implementation:**
-    ```python
-    patience = 3
-    min_delta = 0.001
-    early_stopping_counter = 0
-
-    if val_loss < best_val_loss - min_delta:
-        best_val_loss = val_loss
-        early_stopping_counter = 0
-    else:
-        early_stopping_counter += 1
-
-    if early_stopping_counter >= patience:
-        print(f"Early stopping triggered after {epoch+1} epochs.")
-        break
 
 # 2. Data Augmentation
 
