@@ -8,9 +8,7 @@ tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-large-patch14")
 clip_model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
 clip_processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
 
-def train_loop(dataloader, val_loader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs, pipe, patience=5):
-    best_val_loss = float('inf')
-    epochs_without_improvement = 0
+def train_loop(dataloader, val_loader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs, pipe):
 
     for epoch in range(num_epochs):
         epoch_loss = 0
@@ -60,16 +58,6 @@ def train_loop(dataloader, val_loader, unet, text_encoder, vae, noise_scheduler,
         # Validate the model
         val_loss, val_clip_score = validate(val_loader, unet, text_encoder, vae, noise_scheduler, device, pipe)
         print(f"Epoch {epoch+1}/{num_epochs}, Validation Loss: {val_loss:.4f}, Validation CLIP Score: {val_clip_score:.4f}")
-
-        # Check for early stopping
-        if val_loss < best_val_loss:
-            best_val_loss = val_loss
-            epochs_without_improvement = 0
-        else:
-            epochs_without_improvement += 1
-            if epochs_without_improvement >= patience:
-                print(f"Early stopping triggered after {epoch+1} epochs.")
-                break
 
     print("Training complete!")
 
