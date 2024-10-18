@@ -228,16 +228,7 @@ Customimzation and uniqueness is expected from each contributor.
 **Solution**: Make sure you have installed the correct version of PyTorch that supports GPU. Install it using:
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-# Issue: "ModuleNotFoundError" for certain packages.
-
-# Solution: Double-check that all dependencies are installed correctly by running:
-pip install -r requirements.txt
 
 
-## Resources
-
-- LoRA paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
-- Stable Diffusion: [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
-- Hugging Face Diffusers: [Documentation](https://huggingface.co/docs/diffusers/index)
 
 
