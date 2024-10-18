@@ -221,10 +221,16 @@ Customimzation and uniqueness is expected from each contributor.
 - Adjust the U-Net architecture in `main.py` by modifying which layers receive LoRA
 - Implement additional training techniques in `train.py` (e.g., gradient clipping, learning rate scheduling)
 
-## Resources
+## Troubleshooting
 
+**Issue**: Error with CUDA when trying to use GPU.
+
+**Solution**: Make sure you have installed the correct version of PyTorch that supports GPU. Install it using:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+```
+
+## Resources
 - LoRA paper: [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
 - Stable Diffusion: [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752)
 - Hugging Face Diffusers: [Documentation](https://huggingface.co/docs/diffusers/index)
-
-
