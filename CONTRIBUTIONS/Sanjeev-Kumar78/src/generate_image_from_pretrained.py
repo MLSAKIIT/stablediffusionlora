@@ -30,7 +30,7 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model_path = "CompVis/stable-diffusion-v1-4"  # Base model path
 
-    lora_weights_path = "/content/CONTRIBUTIONS/Sanjeev-Kumar78/src/Models/lora_weights.pt"  # LoRA weights path
+    lora_weights_path = "CONTRIBUTIONS\Sanjeev-Kumar78\src\Models\lora_weights.pt"  # LoRA weights path
     pipe = load_trained_model(model_path, lora_weights_path, device)
 
     prompts = [
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     for prompt in prompts:
         image = generate_image(prompt, pipe)
         Images.append(image)
-    save_images(Images, "/content/CONTRIBUTIONS/Sanjeev-Kumar78/src/output_images")
+    save_images(Images, "CONTRIBUTIONS\Sanjeev-Kumar78\src\output_images")
