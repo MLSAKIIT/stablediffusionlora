@@ -25,7 +25,7 @@ def main():
     noise_scheduler = DDPMScheduler.from_config(pipe.scheduler.config)
 
     dataset = CustomDataset("CONTRIBUTIONS\Sanjeev-Kumar78\src\Dataset")  # Update this path as needed
-    k_folds = 5
+    k_folds = 2
     kfold = KFold(n_splits=k_folds, shuffle=True)
 
     for fold, (train_ids, val_ids) in enumerate(kfold.split(dataset)):
@@ -39,7 +39,7 @@ def main():
         val_loader = DataLoader(val_subsampler, batch_size=1, shuffle=False)
 
         optimizer = torch.optim.AdamW(unet.parameters(), lr=1e-5, weight_decay=1e-5)
-        num_epochs = 1
+        num_epochs = 4
 
         train_loop(train_loader, val_loader, unet, text_encoder, vae, noise_scheduler, optimizer, device, num_epochs, pipe=pipe)
 
