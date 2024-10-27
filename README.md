@@ -24,6 +24,7 @@ sd-lora-finetuning/
 │   ├── generate.py
 │   ├── lora.py
 │   ├── main.py
+|   |── scraping.py
 │   ├── train.py
 │   └── utils.py
 └── CONTRIBUTIONS/
@@ -38,6 +39,7 @@ sd-lora-finetuning/
             ├── generate.py
             ├── lora.py
             ├── main.py
+            |── scraping.py
             ├── train.py
             └── utils.py
 
@@ -165,6 +167,21 @@ def generate_image(prompt, pipeline, num_inference_steps=50):
    ```
    pip install -r requirements.txt
    ```
+
+## Dataset Generation
+If you want to scrape images and captions from the web, you can use the `scraping.py` script, which uses BING API to download images and captions which can be used for training. `Dataset` folder should be created in the `src` directory to store the images and captions.
+ - How To Use:
+   - Create a `.env` file in the root directory and add the following:
+     ```
+     API_KEY="YOUR_BING_API_KEY"
+     ```
+    - You can get the API key from the Azure portal [Create](https://www.microsoft.com/en-us/bing/apis/bing-image-search-api).
+    - Replace this "YOUR_BING_API_KEY" with your API key.
+    - Change the `query` in the [`scraping.py`](src\scraping.py) file to the desired search query.
+    - Change the path in the [`scraping.py`](src\scraping.py) file to the desired path where you want to store the images and captions.
+    - Run the `scraping.py` file to download the images and captions.
+  
+  **Note:** The Image Caption will be the same as the Search Query. So, make sure to use the search query that you want to use as the caption of the image while training.
 
 ## Contributing
 
