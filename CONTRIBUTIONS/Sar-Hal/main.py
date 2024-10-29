@@ -45,7 +45,8 @@ def main():
     
     # Generate samples(update prompts as per your finetuning concept)
     prompts = [
-        "A Bulbasaur","Pokemon Bulbasaur", "Green Bulbasaur in HD", "Bulbasaur", "Bulbasaur"
+        "Sad Rayquaza", "Rayquaza in Blue Ocean", "Rayquaza Flying", "Epic Rayquaza",
+    "Angry Rayquaza"
     ]
     pipe.unet = unet
     images = [generate_image(prompt, pipe) for prompt in prompts]
